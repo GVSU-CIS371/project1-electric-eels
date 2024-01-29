@@ -5,3 +5,9 @@ html {
   margin: 0px;
   padding: 0px;
 }
+
+#app {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "header" "main" "footer";
+}
