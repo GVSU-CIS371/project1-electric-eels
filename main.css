@@ -29,7 +29,7 @@ store-item: Style the item information.
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "header" "main" "footer";
-  height: 100vw; /*Set height & width to screen size*/
+  height: 100vh; /*Set height & width to screen size*/
   width: 100vw;
 }
 
