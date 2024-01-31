@@ -25,31 +25,85 @@ store-item: Style the item information.
   Overall The layout should fill the browser’s width without causing horizontal scrolling.
 */
 
+/* Advice from Brett:
+  If you have 2 monitors, this is awesome for it.
+  Once you run 'npm run dev' then you can open up the browser 
+  and the code editor side by side.
+
+  Pressing CTRL+S will refresh the browser for you, with any code changes you make.
+*/
+
+
+body {
+  width: 99vw;
+}
+
 #app {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "header" "main" "footer";
-  height: 100vh; /*Set height & width to screen size*/
-  width: 100vw;
+  gap: 5px;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
 }
 
 header {
-  /* Should contain spacing b/t store name and nav links
-      Probably using a flexbox for this*/
-  display: flexbox;
+  display: flex;
   justify-content: space-between;
+  flex-direction: row;
+
   grid-area: header;
+
+  /*Coloring for debug*/
+  background-color: lightblue;
+}
+
+header>nav>ul {
+  display: flex;
+  gap: 20px; /*This is a possible solution to the link spacing issue -- Not very adaptable though*/
+  justify-content: space-between;
+  flex-direction: row;
+
+  /*Coloring for debug*/
+  background-color: navy;
+}
+header>nav {
+  /*Coloring for debug*/
+  background-color: aqua;
+}
+
+header>h1 {
+  /*Coloring for debug*/
+  background-color: aqua;
 }
 
 main {
   grid-area: main;
+
+  /*Fits items in main into 4 columns, automatic rows*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  column-gap: 5px;
+  /*Coloring for debug*/
+  background-color: lightgreen;
 }
 
 footer {
   grid-area: footer;
+
+  /*Coloring for debug*/
+  background-color: lightyellow;
 }
 
 .store-item {
-  display:flexbox;
-  /*Images need to be resized and displayed in a row*/
+  font:100% Arial, sans-serif;
+  display:flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
