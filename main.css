@@ -36,7 +36,17 @@ store-item: Style the item information.
 header {
   /* Should contain spacing b/t store name and nav links
       Probably using a flexbox for this*/
-  gap: 5px; /*Placeholder item.*/
+  display: flexbox;
+  justify-content: space-between;
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
 }
 
 .store-item {
