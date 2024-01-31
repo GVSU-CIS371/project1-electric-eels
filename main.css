@@ -7,29 +7,22 @@ html {
 }
 
 /*
-  Layout: Implement a 3-row layout using CSS Grid: Header, Main, and Footer.
-
-Ensure there is no horizontal scroll.
+Layout: Implement a 3-row layout using CSS Grid: Header, Main, and Footer.
+  Ensure there is no horizontal scroll.
 
 Header: Position the store’s name at the top left and navigation links at the top right.
 
 Footer: Contains copyrights.
 
 Main: Display all store items.
-
-Maintain equal space between all items.
-
-Each row should display 4 items.
-
-Store items should automatically wrap to the next row after every 4 items.
+  Maintain equal space between all items.
+  Each row should display 4 items.
+  Store items should automatically wrap to the next row after every 4 items.
 
 store-item: Style the item information.
-
-All store-items should have the same height and width.
-
-Ensure that the Rating, Price, and Stock information are displayed in the same row.
-
-Overall The layout should fill the browser’s width without causing horizontal scrolling.
+  All store-items should have the same height and width.
+  Ensure that the Rating, Price, and Stock information are displayed in the same row.
+  Overall The layout should fill the browser’s width without causing horizontal scrolling.
 */
 
 #app {
