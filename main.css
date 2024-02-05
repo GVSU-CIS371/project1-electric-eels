@@ -56,6 +56,8 @@ main {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 .store-item:hover {
@@ -74,9 +76,12 @@ main {
 }
 
 .item-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px;
   font-weight: bold;
   background-color: #3498db;
