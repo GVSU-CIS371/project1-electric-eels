@@ -65,7 +65,8 @@ main {
 
 .store-item img {
   width: 100%;
-  height: auto;
+  /*height: auto;*/
+  aspect-ratio: 1/1;
   border-bottom: 1px solid #bdc3c7;
 }
 
