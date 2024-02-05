@@ -1,11 +1,41 @@
 body,
 html {
-  margin: 0;
-  padding: 0;
+  /* height:100%; */
+
+  margin: 0px;
+  padding: 0px;
 }
 
+/*
+Layout: Implement a 3-row layout using CSS Grid: Header, Main, and Footer.
+  Ensure there is no horizontal scroll.
+
+Header: Position the store’s name at the top left and navigation links at the top right.
+
+Footer: Contains copyrights.
+
+Main: Display all store items.
+  Maintain equal space between all items.
+  Each row should display 4 items.
+  Store items should automatically wrap to the next row after every 4 items.
+
+store-item: Style the item information.
+  All store-items should have the same height and width.
+  Ensure that the Rating, Price, and Stock information are displayed in the same row.
+  Overall The layout should fill the browser’s width without causing horizontal scrolling.
+*/
+
+/* Advice from Brett:
+  If you have 2 monitors, this is awesome for it.
+  Once you run 'npm run dev' then you can open up the browser 
+  and the code editor side by side.
+
+  Pressing CTRL+S will refresh the browser for you, with any code changes you make.
+*/
+
+
 body {
-  font-family: 'Roboto', sans-serif;
+  width: 99vw;
 }
 
 #app {
@@ -21,72 +51,59 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+
   grid-area: header;
-  background-color: #3498db;
-  padding: 10px;
+
+  /*Coloring for debug*/
+  background-color: lightblue;
 }
 
 header>nav>ul {
   display: flex;
-  gap: 20px;
-  justify-content: flex-end;
-}
+  gap: 20px; /*This is a possible solution to the link spacing issue -- Not very adaptable though*/
+  justify-content: space-between;
+  flex-direction: row;
 
-header>nav>a {
-  color: #fff;
-  text-decoration: none;
+  /*Coloring for debug*/
+  background-color: lightblue;
+}
+header>nav {
+  /*Coloring for debug*/
+  background-color: lightblue;
 }
 
 header>h1 {
-  color: #fff;
+  /*Coloring for debug*/
+  background-color: aqua;
 }
 
 main {
   grid-area: main;
+
+  /*Fits items in main into 4 columns, automatic rows*/
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  column-gap: 5px;
+  /*Coloring for debug*/
+  background-color: lightblue;
 }
 
 footer {
   grid-area: footer;
-  background-color: #f39c12;
-  padding: 10px;
-  text-align: center;
-  color: #fff;
+
+  /*Coloring for debug*/
+  background-color: lightyellow;
 }
 
 .store-item {
-  font-size: 14px;
-  background-color: #ecf0f1;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
+  font:100% Arial, sans-serif;
+  display:flex;
+  flex-direction: column;
 }
 
-.store-item:hover {
-  transform: scale(1.05);
-}
-
-.store-item img {
+img {
   width: 100%;
-  height: auto;
-  border-bottom: 1px solid #bdc3c7;
-}
-
-.store-item p {
-  padding: 10px;
-  margin: 0;
-}
-
-.item-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  font-weight: bold;
-  background-color: #3498db;
-  color: #fff;
+  height: 100%;
 }
