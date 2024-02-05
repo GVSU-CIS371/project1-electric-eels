@@ -69,6 +69,10 @@ main {
   border-bottom: 1px solid #bdc3c7;
 }
 
+.store-item p:first-of-type {
+  font-weight: bold;
+}
+
 .store-item p {
   padding: 10px;
   margin: 0;
